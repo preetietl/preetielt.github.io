@@ -1,0 +1,368 @@
+@charset "UTF-8";
+.globalContent {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.globalNav {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: absolute;
+  left: 0;
+  top: 10px;
+  right: 0;
+  z-index: 500;
+  height: 50px;
+  -webkit-perspective: 2000px;
+  perspective: 2000px;
+}
+.globalNav ul {
+  padding: 0;
+  margin: 0;
+}
+.globalNav li {
+  list-style: none;
+  display: block;
+  white-space: nowrap;
+}
+.globalNav a {
+  text-decoration: none;
+  color: var(--blackColor);
+  display: block;
+  padding: 8px 20px;
+  position: relative;
+  font-size: var(--fontSize);
+  font-weight: 600;
+  transition: var(--transition);
+}
+.globalNav a:hover {
+  color: #8e8a94 !important;
+  cursor: pointer;
+  padding-left: 25px;
+}
+.globalNav > .container-lg {
+  padding: 0;
+}
+.globalNav .navRoot {
+  position: relative;
+}
+.globalNav .navSection.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.globalNav .navSection.logo img {
+  width: 200px;
+}
+.globalNav .navSection.logo .rootLink {
+  padding-left: 20px !important;
+}
+.globalNav .navSection.primary {
+  display: none;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-top: 5px;
+}
+.globalNav .navSection.primary .rootLink {
+  position: relative;
+  color: var(--whiteColor);
+  transition: var(--transition);
+  font-weight: 600;
+  font-size: 15.2px;
+}
+.globalNav .navSection.secondary {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-top: 5px;
+}
+.globalNav .navSection.secondary a {
+  z-index: 1;
+  border: none;
+  position: relative;
+  /* padding: 12px 35px !important; */
+  border-radius: 30px;
+  display: inline-block;
+  color: var(--whiteColor);
+  transition: var(--transition);
+  box-shadow: 0px 12px 35px rgba(237, 39, 117, 0.25);
+  font-size: var(--fontSize);
+  font-weight: 600;
+  margin-right: 10px;
+}
+.globalNav .navSection.secondary a:hover {
+  background-color: var(--mainColor);
+  color: var(--whiteColor) !important;
+}
+.globalNav .navSection.mobile {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+.globalNav .rootLink {
+  display: inline-block;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+  padding: 12px 20px !important;
+}
+.globalNav .rootLink.active {
+  color: #8e8a94 !important;
+}
+.globalNav .hasDropdown {
+  cursor: default;
+}
+.globalNav .item-home h1 {
+  line-height: 50px;
+  font-size: 20px;
+  margin: 0;
+  color: inherit;
+}
+.globalNav .item-home svg {
+  vertical-align: -5px;
+}
+.globalNav .item-home svg path {
+  fill: currentColor;
+}
+.globalNav .item-dashboard:after {
+  content: "➞";
+  padding-left: 1px;
+}
+.globalNav .dropdownRoot {
+  position: absolute;
+  z-index: 1000;
+  left: 0;
+  right: 0;
+  top: 55px;
+  pointer-events: none;
+  -webkit-transform: rotateX(-15deg);
+  transform: rotateX(-15deg);
+  -webkit-transform-origin: 50% -50px;
+  transform-origin: 50% -50px;
+  opacity: 0;
+  will-change: transform, opacity;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: transform, opacity;
+  transition-property: transform, opacity, -webkit-transform;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  display: none;
+}
+.globalNav .dropdownBackground {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 50px 100px rgba(50, 50, 93, 0.1), 0 15px 35px rgba(50, 50, 93, 0.15), 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 520px;
+  height: 400px;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  will-change: transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+}
+.globalNav .alternateBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  will-change: transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  right: 0;
+  height: 1000px;
+  background: #f6f9fc;
+}
+.globalNav .dropdownArrow {
+  top: -6px;
+  margin: 0 0 0 -6px;
+  width: 12px;
+  height: 12px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  border-radius: 4px 0 0 0;
+  background: #fff;
+  box-shadow: -3px -3px 5px rgba(82, 95, 127, 0.04);
+  will-change: transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  position: absolute;
+  left: 0;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+}
+.globalNav .dropdownContainer {
+  position: absolute;
+  left: 0;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  overflow: hidden;
+  top: 0;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  will-change: transform, width, height;
+  -webkit-transition-property: width, height, -webkit-transform;
+  transition-property: width, height, -webkit-transform;
+  transition-property: transform, width, height;
+  transition-property: transform, width, height, -webkit-transform;
+}
+.globalNav .dropdownSection {
+  opacity: 0;
+  pointer-events: none;
+  will-change: transform, opacity;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: transform, opacity;
+  transition-property: transform, opacity, -webkit-transform;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  background: red;
+}
+.globalNav .dropdownSection.active {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+.globalNav .dropdownSection.left {
+  -webkit-transform: translateX(-150px);
+  transform: translateX(-150px);
+}
+.globalNav .dropdownSection.right {
+  -webkit-transform: translateX(150px);
+  transform: translateX(150px);
+}
+.globalNav .dropdownContent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 250px;
+}
+.globalNav .linkGroup {
+  padding: 7px 0px;
+}
+
+.globalNav.compact .navRoot {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.globalNav.compact .navSection.logo {
+  position: static;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+.globalNav.compact .navSection.secondary {
+  position: static;
+}
+
+.globalNav.dropdownActive .dropdownRoot {
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transform: none;
+  transform: none;
+}
+.globalNav.dropdownActive .dropdownSection.active {
+  pointer-events: auto;
+}
+
+.globalNav.noDropdownTransition .alternateBackground {
+  -webkit-transition: none;
+  transition: none;
+}
+.globalNav.noDropdownTransition .dropdownArrow {
+  -webkit-transition: none;
+  transition: none;
+}
+.globalNav.noDropdownTransition .dropdownBackground {
+  -webkit-transition: none;
+  transition: none;
+}
+.globalNav.noDropdownTransition .dropdownContainer {
+  -webkit-transition: none;
+  transition: none;
+}
+.globalNav.noDropdownTransition .dropdownSection {
+  -webkit-transition: none;
+  transition: none;
+}
+
+.preeti-new-navbar-area {
+  display: none;
+}
+
+@media (min-width: 670px) {
+  .globalNav .navSection.primary {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .globalNav .navSection.secondary {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+  }
+  .globalNav .navSection.mobile {
+    display: none;
+  }
+  .globalNav .rootLink {
+    padding: 0 calc(10px + (100vw - 670px) * 0.040541);
+  }
+  .globalNav .dropdownRoot {
+    display: block;
+  }
+}
+@media (min-width: 1040px) {
+  .globalNav .rootLink {
+    padding: 0 25px;
+  }
+}
+@media (max-width: 991px) {
+  .globalNav {
+    display: none;
+  }
+  .preeti-new-navbar-area {
+    display: block;
+  }
+}
+@media (min-width: 992px) {
+  .navbar-area {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=animated-navbar.css.map */
