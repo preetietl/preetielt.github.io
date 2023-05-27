@@ -632,3 +632,8 @@ setTimeout(function () {
   p.style.display = "inline-block";
   typeEffect(p, speed);
 }, delay);
+
+function callme() {
+  $("#loader").fadeOut("slow");
+  $("body").css("overflow", "visible");
+}

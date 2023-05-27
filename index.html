@@ -21,7 +21,21 @@
 
     <link rel="icon" type="image/ico" href="assets/img/favicon.ico" />
   </head>
-  <body>
+  <body onload="callme()">
+    <div id="loader">
+      <img
+        src="assets/img/logo-preeti.png"
+        alt="logo"
+        style="height: 60px; margin-bottom: 100px"
+      />
+      <img style="height: 150px" src="assets/img/Who   Benefits copy.png" />
+      <button class="loading-btn">
+        Loading ...
+        <svg>
+          <rect x="1" y="1"></rect>
+        </svg>
+      </button>
+    </div>
     <!-- Start Navbar Area -->
     <header class="globalNav noDropdownTransition">
       <div class="container-lg">
