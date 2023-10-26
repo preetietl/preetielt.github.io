@@ -5322,7 +5322,7 @@ button.loading-btn>svg>rect {
   justify-content: center;
   background-color: #8547e6;
   position: fixed;
-  z-index: 999999;
+  z-index: 9999999999;
 }
 
 /*  Start rich-box-section-appendix styles */
