@@ -1363,6 +1363,8 @@ New Demo CSS
   padding: 10px 25px;
   margin-bottom: 20px;
   border-radius: 50px;
+  z-index: 999999;
+  position: relative;
 }
 .new-app-main-banner-gradient-content a {
     color: #FFF;
